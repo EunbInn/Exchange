@@ -1,2 +1,2 @@
 # Exchange
-# kopo08 - java Lecture Exchange program
+kopo08 - java Lecture Exchange program
