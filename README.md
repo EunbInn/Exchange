@@ -1,2 +1,10 @@
-# Exchange
-kopo08 - java Lecture Exchange program
+#환전 프로그램 만들기
+
+개발자: kopo08 김은비
+
+주요기능
+1. 환전 금액 입력
+2. 환전 외화 종류 입력
+3. 환전 금액 및 거스름돈 출력
+4. 외화 잔액 출력
+5. file 저장
