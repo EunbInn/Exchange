@@ -11,9 +11,9 @@ public class ExchangeMoney {
 		
 		while(true) {
 			inputType = input.inputFromConsoleType();
-			inputMoney = input.inputFromConsoleMoney();
-			
+
 			if (inputType > 0 && inputType < 4) {
+				inputMoney = input.inputFromConsoleMoney();
 				String writeResult = main.getMoney(inputType, inputMoney);
 				FileReadAndWrite.writeOnFile(writeResult);
 			} else if (inputType == 0) {
