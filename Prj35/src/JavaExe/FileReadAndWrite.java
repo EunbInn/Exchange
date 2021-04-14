@@ -72,29 +72,20 @@ public class FileReadAndWrite {
 	
 	//get format of each money to combine with final format to write on file
 	public static String ExFormat(int[] sort, int type, boolean rest) {
-		int lengDol = CostValue.dollar.length;
-		int lengEur = CostValue.euro.length;
-		int lengYen = CostValue.yen.length;
+		int[] arr_length = {CostValue.dollar.length, CostValue.euro.length, CostValue.yen.length};
+
 		String format = "";
 		
 		int[][] all = new int[3][];
 		
-		if (type == CostValue.typeUSD && rest == true) {
-			all[0] = sort;
-			all[1] = new int[lengEur];
-			all[2] = new int[lengYen];
-		} else if (type == CostValue.typeEUR && rest == true) {
-			all[0] = new int[lengDol];
-			all[1] = sort;
-			all[2] = new int[lengYen];
-		} else if (type == CostValue.typeJPY && rest == true) {
-			all[0] = new int[lengDol];
-			all[1] = new int[lengEur];
-			all[2] = sort;
-		} else if (rest == false) {
-			all[0] = new int[lengDol];
-			all[1] = new int[lengEur];
-			all[2] = new int[lengYen];
+		for (int i = 0; i < all.length; i++) {
+			if ((type - 1) == i && rest == true) {
+				all[i] = sort;
+			} else if ((type - 1) != i && rest == true) {
+				all[i] = new int[arr_length[i]];
+			} else if (rest == false) {
+				all[i] = new int[arr_length[i]];
+			}
 		}
 		
 		for (int i = 0; i < all.length; i++) {

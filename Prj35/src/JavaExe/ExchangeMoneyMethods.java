@@ -8,7 +8,6 @@ public class ExchangeMoneyMethods {
 		int returnMoney = 0; //final return money
 		int returnWon = 0; // change that is left after exchange
 		int typeInArray = type - 1; // type number in array is type - 1
-		String result = "";
 		
 		ExchangedMoney = money / CostValue.currency[typeInArray]; 
 		//get exchanged money as integer type that we can actually get from bank : paper
